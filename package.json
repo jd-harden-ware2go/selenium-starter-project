@@ -1,0 +1,15 @@
+{
+  "name": "selenium-simple-starter",
+  "version": "0.0.1",
+  "description": "A simple starter project to get going with Selenium using Javascript and Chrome",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "WTFPL",
+  "dependencies": {
+    "chromedriver": "2.24.1",
+    "selenium-webdriver": "3.0.0-beta-3"
+  }
+}
