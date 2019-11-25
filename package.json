@@ -9,7 +9,7 @@
   "author": "",
   "license": "WTFPL",
   "dependencies": {
-    "chromedriver": "2.24.1",
-    "selenium-webdriver": "3.0.0-beta-3"
+    "chromedriver": "78.0.1",
+    "selenium-webdriver": "3.6.0"
   }
 }

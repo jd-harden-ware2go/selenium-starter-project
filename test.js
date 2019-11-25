@@ -12,9 +12,24 @@ var driver = new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
     .build();
 
-driver.get('http://www.google.com/ncr');
+    
+// Search for the term webdriver on google.com
+driver.get('http://www.google.com/');
+driver.findElement(By.name('q'))
+console.log('Input box found')
 driver.findElement(By.name('q')).sendKeys('webdriver');
-driver.findElement(By.name('btnG')).click();
-driver.wait(until.titleIs('webdriver - Google Search'), 1000);
+console.log('Webdriver searched')
+driver.findElement(By.name('q')).sendKeys();
+driver.findElement(By.name('btnK')).click();
+
+{driver.wait(until.titleIs('webdriver - Google Search'), 10000);
+let pageTitle = driver.getTitle();
+console.log('Page title is ' + pageTitle)};
 driver.quit();
+
+
+//launch sogeti.com and search for a term
+
+// driver.get('http://www.facebook.com')
+
 
