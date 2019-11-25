@@ -17,17 +17,15 @@ var driver = new webdriver.Builder()
 
 //launch sogeti.com and search for a term
 driver.manage().window().maximize();
-driver.manage().timeouts().implicitlyWait(1);
-driver.get('http://www.sogeti.com/');
-driver.manage().timeouts().implicitlyWait(1);
-// Thread.sleep(5000);
-driver.findElement(By.css('div.navbar-search > span')).click();
-driver.manage().timeouts().implicitlyWait(1);
-driver.findElement(By.css('.top-search'));
-driver.manage().timeouts().implicitlyWait(1);
-driver.findElement(By.css('.top-search')).sendKeys('automation');
-driver.manage().timeouts().implicitlyWait(1);
-driver.findElement(By.css('.top-search')).sendKeys();
 driver.manage().timeouts().implicitlyWait(5);
-driver.findElement(By.css('.search-label')).click();
-// driver.quit();
+driver.get('http://www.linkedin.com')
+driver.manage().timeouts().implicitlyWait(5);
+
+//Search for a company on LinkedIn - General Motors
+// driver.findElement(By.css('.sign-in-card__dismiss-icon')).click();
+driver.manage().timeouts().implicitlyWait(5);
+driver.findElement(By.css('[data-tracking-control-name="homepage-basic_dismissable-input"][name="keywords"]')).click();
+driver.manage().timeouts().implicitlyWait(1);
+driver.findElement(By.css('[data-tracking-control-name="homepage-basic_dismissable-input"][name="keywords"]')).sendKeys('General Motors')
+driver.manage().timeouts().implicitlyWait(1);
+driver.findElement(By.css('button[data-searchbar-type="JOBS"]')).click();
