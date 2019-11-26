@@ -30,4 +30,4 @@ driver.manage().timeouts().implicitlyWait(1);
 driver.findElement(By.css('.top-search')).sendKeys();
 driver.manage().timeouts().implicitlyWait(5);
 driver.findElement(By.css('.search-label')).click();
-// driver.quit();
+driver.quit();

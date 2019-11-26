@@ -15,6 +15,8 @@ var driver = new webdriver.Builder()
     
 // Search for the term webdriver on google.com
 driver.get('http://www.google.com/');
+driver.manage().window().maximize();
+driver.manage().timeouts().implicitlyWait(5);
 driver.findElement(By.name('q'))
 console.log('Input box found')
 driver.findElement(By.name('q')).sendKeys('webdriver');

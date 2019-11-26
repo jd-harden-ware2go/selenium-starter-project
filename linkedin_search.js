@@ -15,17 +15,29 @@ var driver = new webdriver.Builder()
     .withCapabilities(webdriver.Capabilities.chrome())
     .build();
 
-//launch sogeti.com and search for a term
+//launch linkedin.com and search for a term
 driver.manage().window().maximize();
 driver.manage().timeouts().implicitlyWait(5);
 driver.get('http://www.linkedin.com')
-driver.manage().timeouts().implicitlyWait(5);
+driver.manage().timeouts().implicitlyWait(15);
 
 //Search for a company on LinkedIn - General Motors
-// driver.findElement(By.css('.sign-in-card__dismiss-icon')).click();
-driver.manage().timeouts().implicitlyWait(5);
-driver.findElement(By.css('[data-tracking-control-name="homepage-basic_dismissable-input"][name="keywords"]')).click();
+// driver.manage().timeouts().implicitlyWait(5);
+// driver.manage().timeouts().implicitlyWait(1);
+// driver.findElement(By.name("keywords")).click
+driver.findElement(By.className('sign-in-card__dismiss-icon onload lazy-loaded')).click();
+driver.manage().timeouts().implicitlyWait(15);
+driver.findElement(By.className("dismissable-input__input")).click();
+driver.manage().timeouts().implicitlyWait(15);
+driver.findElement(By.className("search__button pill pill--blue etta-pill")).click();
+// driver.findElement(By.className('dismissable-input__input')).sendKeys('General Motors')
+// console.log('second element');
 driver.manage().timeouts().implicitlyWait(1);
-driver.findElement(By.css('[data-tracking-control-name="homepage-basic_dismissable-input"][name="keywords"]')).sendKeys('General Motors')
-driver.manage().timeouts().implicitlyWait(1);
-driver.findElement(By.css('button[data-searchbar-type="JOBS"]')).click();
+driver.quit();
+// driver.findElement(By.css('button[data-searchbar-type="JOBS"]')).click();
+
+//xpath //section[@class='dismissable-input search-input dismissable-input--focus']/input[@name='firstName']
+
+///html/body/main/section[1]/section/div[2]/section[1]/form/section[1]
+
+//html/body/main/section[1]/section/div[2]/section[2]/form/section[1]/input
